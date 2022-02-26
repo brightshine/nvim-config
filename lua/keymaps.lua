@@ -41,10 +41,10 @@ map('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 map('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
 -- Telescope
-map('n', '<leader>ff', '<cmd>lua telescope.builtin.find_files{ cwd = vim.fn.systemlist("git rev-parse --show-toplevel")[1] }<cr>', opts)
-map('n', '<leader>fg', '<cmd>lua telescope.builtin.live_grep{ cwd = vim.fn.systemlist("git rev-parse --show-toplevel")[1] }<cr>', opts)
-map('n', '<leader>fb', '<cmd>lua telescope.builtin.buffers()<cr>', opts)
-map('n', '<leader>fh', '<cmd>lua telescope.builtin.help_tags()<cr>', opts)
+map('n', '<leader>ff', '<cmd>lua require("telescope.builtin").find_files{ cwd = vim.fn.systemlist("git rev-parse --show-toplevel")[1] }<cr>', opts)
+map('n', '<leader>fg', '<cmd>lua require("telescope.builtin").live_grep{ cwd = vim.fn.systemlist("git rev-parse --show-toplevel")[1] }<cr>', opts)
+map('n', '<leader>fb', '<cmd>lua require("telescope.builtin").buffers()<cr>', opts)
+map('n', '<leader>fh', '<cmd>lua require("telescope.builtin").help_tags()<cr>', opts)
 
 -- Gtags
 map('n', '<leader>cs', ':GscopeFind s <C-R><C-W><cr>' , opts)
