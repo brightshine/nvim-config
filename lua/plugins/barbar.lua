@@ -24,7 +24,7 @@ vim.g.bufferline = {
   -- Enable/disable icons
   -- if set to 'numbers', will show buffer index in the tabline
   -- if set to 'both', will show buffer index and icons in the tabline
-  icons = false,
+  icons = true,
 
   -- If set, the icon color will follow its corresponding buffer
   -- highlight group. By default, the Buffer*Icon group is linked to the
@@ -33,11 +33,11 @@ vim.g.bufferline = {
   icon_custom_colors = false,
 
   -- Configure icons on the bufferline.
-  icon_separator_active = 'a',
-  icon_separator_inactive = 'i',
-  icon_close_tab = 'c',
-  icon_close_tab_modified = 'm',
-  icon_pinned = 'p',
+  --icon_separator_active = 'a',
+  --icon_separator_inactive = 'i',
+  --icon_close_tab = 'c',
+  --icon_close_tab_modified = 'm',
+  --icon_pinned = 'p',
 
   -- If true, new buffers will be inserted at the start/end of the list.
   -- Default is to insert after current buffer.

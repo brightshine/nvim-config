@@ -1,6 +1,7 @@
 call plug#begin()
 Plug 'nvim-treesitter/nvim-treesitter' , {'do': ':TSUpdate'}
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'kyazdani42/nvim-web-devicons'
 
 " LSP
 Plug 'neovim/nvim-lspconfig'
