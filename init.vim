@@ -18,6 +18,7 @@ Plug 'sharkdp/fd'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
 Plug 'liuchengxu/vista.vim'
+Plug 'romgrk/barbar.nvim'
 
 Plug 'rhysd/vim-clang-format'
 
@@ -65,6 +66,7 @@ lua require('plugins/nvim-treesitter')
 lua require('plugins/nvim-tree')
 lua require('plugins/vista')
 lua require('plugins/telescope')
+lua require('plugins/barbar')
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Hotkey mapping
