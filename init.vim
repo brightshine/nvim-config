@@ -19,7 +19,6 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
 Plug 'liuchengxu/vista.vim'
 
-"Plug 'Chiel92/vim-autoformat'
 Plug 'rhysd/vim-clang-format'
 
 " swtich between source files and header files quickly.
@@ -37,6 +36,8 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'lifepillar/vim-colortemplate'
 Plug 'sainnhe/sonokai'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " To check
 Plug 'tpope/vim-projectionist'
@@ -54,14 +55,6 @@ Plug 'peterhoeg/vim-qml'
 "Plug 'prabirshrestha/async.vim'
 
 call plug#end()
-
-
-" Enable true color 启用终端24位色
-"if exists('+termguicolors')
-"  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-"  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-"  set termguicolors
-"endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
@@ -95,11 +88,6 @@ lua << EOF
 require'lspconfig'.clangd.setup{}
 require('lspfuzzy').setup {}
 EOF
-
-set path+=~/src/dev-geoexpansion/**/Interface
-set path+=~/src/dev-geoexpansion/**/Implementation
-set path+=/home/hsiehd/src/dev-geoexpansion/Framework/ThirdParty/NavCloudCL/Implementation/include
-set path+=/home/hsiehd/src/dev-geoexpansion/Engines/UserProfile/ActiveUserProfileManager/Interface
 
 " ----------gutentags.vim插件配置-----------------------------------
 " enable gtags module
