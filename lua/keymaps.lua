@@ -10,7 +10,7 @@ map('n', '<leader>n', ':NvimTreeFindFile<CR>', opts) -- search file
 map('n', '<C-m>', ':Vista!!<CR>', opts) -- open/close
 
 -- Close all windows
-map('n', '<leader>q', ':qa!<CR>', opts)
+map('n', '<leader>qq', ':qa!<CR>', opts)
 
 -- Enable fold
 map('n', '<C-i>', ':set foldmethod=expr<CR>', opts)
