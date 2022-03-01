@@ -20,7 +20,7 @@ g.nvim_tree_show_icons = {
 }
 
 require('nvim-tree').setup {
-  open_on_setup = true,
+  open_on_setup = false,
   update_cwd = true,
   filters = {
     dotfiles = true,
