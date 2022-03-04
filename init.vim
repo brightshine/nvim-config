@@ -114,7 +114,7 @@ endif
 let g:gutentags_ctags_exclude = [
   \'node_modules', '_build', 'build', 'CMakeFiles', '.mypy_cache', 'venv',
   \'*.md', '*.tex', '*.css', '*.html', '*.json', '*.xml', '*.xmls', '*.ui',
-  \'*.js', '*.java', '*.txt' ]
+  \'*.js', '*.java', '*.txt', '*.sh' ]
 
 " 配置 ctags 的參數
 let g:gutentags_ctags_extra_args = []
