@@ -36,6 +36,7 @@ map('n', '<leader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_fo
 map('n', '<leader>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
 map('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
 map('n', '<leader>ga', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+map('n', '<leader>gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
 map('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 map('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
@@ -92,4 +93,4 @@ map('n', '<Space>bd', ':BufferOrderByDirectory<CR>', opts)
 map('n', '<Space>bl', ':BufferOrderByLanguage<CR>', opts)
 
 -- Copy to clipboard in normal, visual select and operator modes
--- map('', '<leader>c', '"+y') 
+map('', '<leader>c', '"+y', opts) 
