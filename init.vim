@@ -24,6 +24,18 @@ Plug 'vim-scripts/a.vim'
 " Move between Vim panes and tmux splits seamlessly
 Plug 'christoomey/vim-tmux-navigator'
 
+" Completion
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+
+" Snipper engine
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+
 " update gtags database in background automatically on file change.
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'skywind3000/gutentags_plus'
@@ -66,6 +78,7 @@ lua require('plugins/nvim-tree')
 lua require('plugins/vista')
 lua require('plugins/telescope')
 lua require('plugins/barbar')
+lua require('plugins/nvim-cmp')
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Hotkey mapping
@@ -136,3 +149,4 @@ let g:gutentags_auto_add_gtags_cscope = 0
 
 " change focus to quickfix window after search (optional).
 let g:gutentags_plus_switch = 1
+
