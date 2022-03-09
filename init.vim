@@ -80,6 +80,8 @@ map <F7> :if exists("syntax_on") <BAR>
 			\   syntax enable <BAR>
 			\ endif <CR>
 map <F8> :set hls!<BAR>set hls?<CR>
+map <F10> :set foldmethod=syntax<CR>
+map <F11> :set foldmethod=indent<CR>
 
 " ################ vim-clang-format #########################
 let g:clang_format#detect_style_file = 1 "Auto detect the style file
