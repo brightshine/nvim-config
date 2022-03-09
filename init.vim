@@ -36,6 +36,9 @@ Plug 'sainnhe/sonokai'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'dracula/vim', { 'as': 'dracula' }
 
+" Save session
+Plug 'tpope/vim-obsession'
+
 " To check
 Plug 'tpope/vim-projectionist'
 Plug 'aceofall/gtags.vim'
