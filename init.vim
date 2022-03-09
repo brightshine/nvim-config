@@ -7,11 +7,6 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'neovim/nvim-lspconfig'
 Plug 'glepnir/lspsaga.nvim'
 
-" Vim LSP fuzzy
-Plug 'ojroques/nvim-lspfuzzy'
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
-
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'BurntSushi/ripgrep'
@@ -86,11 +81,6 @@ map <F8> :set hls!<BAR>set hls?<CR>
 " ################ vim-clang-format #########################
 let g:clang_format#detect_style_file = 1 "Auto detect the style file
 let g:clang_format#auto_format = 1
-
-lua << EOF
-require'lspconfig'.clangd.setup{}
-require('lspfuzzy').setup {}
-EOF
 
 " ----------gutentags.vim插件配置-----------------------------------
 " enable gtags module
