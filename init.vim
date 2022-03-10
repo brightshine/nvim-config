@@ -1,4 +1,5 @@
 call plug#begin()
+" Syntax tree
 Plug 'nvim-treesitter/nvim-treesitter' , {'do': ':TSUpdate'}
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'kyazdani42/nvim-web-devicons'
@@ -7,15 +8,20 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'neovim/nvim-lspconfig'
 Plug 'glepnir/lspsaga.nvim'
 
+" Fuzzy search
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'BurntSushi/ripgrep'
 Plug 'sharkdp/fd'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
+" Side bar
 Plug 'liuchengxu/vista.vim'
+
+" Tabs
 Plug 'romgrk/barbar.nvim'
 
+" Code format
 Plug 'rhysd/vim-clang-format'
 
 " swtich between source files and header files quickly.
@@ -25,7 +31,6 @@ Plug 'vim-scripts/a.vim'
 Plug 'christoomey/vim-tmux-navigator'
 
 " Completion
-Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
@@ -149,4 +154,3 @@ let g:gutentags_auto_add_gtags_cscope = 0
 
 " change focus to quickfix window after search (optional).
 let g:gutentags_plus_switch = 1
-
