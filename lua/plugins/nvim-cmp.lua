@@ -10,6 +10,19 @@ require'lspconfig'.pyright.setup{}
 require'lspconfig'.tsserver.setup{}
 require'lspconfig'.vimls.setup{}
 
+local clangd_setup = {
+  on_attach = function(client, bufnr)
+    require "lsp_signature".on_attach({ -- This is mandatory, otherwise border config won't get registered.
+      bind = true,
+      handler_opts = {
+        border = "rounded"
+      }
+    }, bufnr
+    ) -- Note: add in lsp client on-attach
+  end,
+}
+require "lsp_signature".setup(clangd_setup)
+
 cmp.setup({
   snippet = {
     -- REQUIRED - you must specify a snippet engine

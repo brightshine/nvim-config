@@ -38,6 +38,8 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 " pictograms for completion items 
 Plug 'onsails/lspkind-nvim'
+" Add signature to completion
+Plug 'ray-x/lsp_signature.nvim'
 
 " Snipper engine
 Plug 'hrsh7th/cmp-vsnip'
