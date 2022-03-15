@@ -36,12 +36,14 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
+" pictograms for completion items 
+Plug 'onsails/lspkind-nvim'
 
 " Snipper engine
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
-" update gtags database in background automatically on file change.
+" Update gtags database in background automatically on file change.
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'skywind3000/gutentags_plus'
 
@@ -124,11 +126,7 @@ if executable('gtags-cscope') && executable('gtags')
   let g:gutentags_modules += ['gtags_cscope']
 endif
 
-let g:gutentags_ctags_exclude = [
-  \'node_modules', '_build', 'build', 'CMakeFiles', '.mypy_cache', 'venv',
-  \'*.md', '*.tex', '*.css', '*.html', '*.json', '*.xml', '*.xmls', '*.ui',
-  \'*.js', '*.java', '*.txt', '*.sh' ]
-
+let g:gutentags_ctags_exclude = [ 'node_modules', '_build', 'build', 'CMakeFiles', '.mypy_cache', 'venv', '*.md', '*.tex', '*.css', '*.html', '*.json', '*.xml', '*.xmls', '*.ui', '*.js', '*.java', '*.txt', '*.sh' ]
 " 配置 ctags 的參數
 let g:gutentags_ctags_extra_args = []
 let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
@@ -154,3 +152,10 @@ let g:gutentags_auto_add_gtags_cscope = 0
 
 " change focus to quickfix window after search (optional).
 let g:gutentags_plus_switch = 1
+
+
+let g:vimspector_enable_mappings = 'HUMAN'
+" for normal mode - the word under the cursor
+nmap <Leader>di <Plug>VimspectorBalloonEval
+" for visual mode, the visually selected text
+xmap <Leader>di <Plug>VimspectorBalloonEval

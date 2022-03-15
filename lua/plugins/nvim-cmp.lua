@@ -1,6 +1,7 @@
 vim.g.completeopt = {menu,menuone,noselect}
 
 local cmp = require'cmp'
+local lspkind = require('lspkind')
 
 require'lspconfig'.bashls.setup{}
 require'lspconfig'.clangd.setup{}
@@ -38,7 +39,13 @@ cmp.setup({
     -- { name = 'snippy' }, -- For snippy users.
   }, {
     { name = 'buffer' },
-  })
+  }),
+  formatting = {
+    format = lspkind.cmp_format({
+      mode = 'symbol', -- show only symbol annotations
+      -- maxwidth = 70, -- prevent the popup from showing more than provided characters
+    })
+  }
 })
 
 -- Set configuration for specific filetype.
@@ -58,13 +65,13 @@ cmp.setup.cmdline('/', {
 })
 
 -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-cmp.setup.cmdline(':', {
-  sources = cmp.config.sources({
-    { name = 'path' }
-  }, {
-    { name = 'cmdline' }
-  })
-})
+-- cmp.setup.cmdline(':', {
+--   sources = cmp.config.sources({
+--     { name = 'path' }
+--   }, {
+--     { name = 'cmdline' }
+--   })
+-- })
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
