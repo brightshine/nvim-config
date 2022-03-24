@@ -56,6 +56,7 @@ Plug 'lifepillar/vim-colortemplate'
 Plug 'sainnhe/sonokai'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'tanvirtin/monokai.nvim'
 
 " Save session
 Plug 'tpope/vim-obsession'
@@ -88,6 +89,7 @@ lua require('plugins/vista')
 lua require('plugins/telescope')
 lua require('plugins/barbar')
 lua require('plugins/nvim-cmp')
+lua require('plugins/monakai')
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Hotkey mapping
