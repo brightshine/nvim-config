@@ -7,6 +7,9 @@ Plug 'kyazdani42/nvim-web-devicons'
 " LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'glepnir/lspsaga.nvim'
+" Plug 'williamboman/nvim-lsp-installer'
+"Clangd's off-spec features for neovim's LSP client.
+Plug 'p00f/clangd_extensions.nvim'
 
 " Fuzzy search
 Plug 'nvim-telescope/telescope.nvim'
@@ -46,8 +49,8 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
 " Update gtags database in background automatically on file change.
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'skywind3000/gutentags_plus'
+"Plug 'ludovicchabant/vim-gutentags'
+"Plug 'skywind3000/gutentags_plus'
 
 " colorscheme
 Plug 'ayu-theme/ayu-vim'
@@ -67,6 +70,10 @@ Plug 'aceofall/gtags.vim'
 Plug 'rking/ag.vim'
 Plug 'peterhoeg/vim-qml'
 
+" Debugger
+Plug 'mfussenegger/nvim-dap'
+Plug 'Pocco81/DAPInstall.nvim'
+
 """""""""""""""""" TO LEARN """""""""""""""""""""""""""""""""""""""
 " Async plugin for vim and neovim to ease the use of ctags/gtags
 "Plug 'jsfaint/gen_tags'
@@ -75,6 +82,8 @@ Plug 'peterhoeg/vim-qml'
 "Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh \| UpdateRemotePlugins' }
 "
 "Plug 'prabirshrestha/async.vim'
+"
+"Plug vscode-neovim/vscode-neovim
 
 call plug#end()
 
@@ -90,6 +99,8 @@ lua require('plugins/telescope')
 lua require('plugins/barbar')
 lua require('plugins/nvim-cmp')
 lua require('plugins/monakai')
+lua require('plugins/nvim-dap')
+lua require('plugins/clangd-extension')
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Hotkey mapping
@@ -163,3 +174,7 @@ let g:vimspector_enable_mappings = 'HUMAN'
 nmap <Leader>di <Plug>VimspectorBalloonEval
 " for visual mode, the visually selected text
 xmap <Leader>di <Plug>VimspectorBalloonEval
+
+" Auto rename tmux window to the file name
+autocmd BufReadPost,FileReadPost,BufNewFile,BufEnter * call system("tmux rename-window '" . expand("%:t") . "'")
+autocmd VimLeave * call system("tmux rename-window 'tmux'")
