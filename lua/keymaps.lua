@@ -60,3 +60,14 @@ map('n', '<leader>ci', ':GscopeFind i <C-R>=expand("<cfile>")<cr><cr>' , opts)
 map('n', '<leader>cd', ':GscopeFind d <C-R><C-W><cr>' , opts)
 map('n', '<leader>ca', ':GscopeFind a <C-R><C-W><cr>' , opts)
 map('n', '<leader>cz', ':GscopeFind z <C-R><C-W><cr>' , opts)
+
+-- Split
+map("n", "sv", ":vsp<CR>", opts)
+map("n", "sh", ":sp<CR>", opts)
+map("n", "sc", "<C-w>c", opts)
+map("n", "so", "<C-w>o", opts) -- close others
+map("n", "s>", ":vertical resize +20<CR>", opts)
+map("n", "s<", ":vertical resize -20<CR>", opts)
+map("n", "s=", "<C-w>=", opts)
+map("n", "sj", ":resize +10<CR>",opts)
+map("n", "sk", ":resize -10<CR>",opts)
