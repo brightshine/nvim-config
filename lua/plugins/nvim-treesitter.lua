@@ -1,4 +1,6 @@
 require('nvim-treesitter.configs').setup {
+  ensure_installed = {"bash", "c", "cpp", "cmake", "css", "dockerfile", "html", "java", "javascript", "json", "lua", "make", "ninja", "python", "php", "perl", "vim"},
+
   highlight = {
     enable = true
   },
@@ -13,6 +15,6 @@ require('nvim-treesitter.configs').setup {
   },
   indent = {
     -- This is an experimental feature.
-    enable = false
+    enable = true
   }
 }
