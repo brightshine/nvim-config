@@ -3,9 +3,12 @@ local fn = vim.fn
 local g = vim.g
 local opt = vim.opt
 
--- General
-opt.mouse = "a"
-opt.clipboard = 'unnamedplus'
+-- UTF-8
+vim.g.encoding = "UTF-8"
+vim.o.fileencoding = "UTF-8"
+
+-- Line number
+vim.wo.number = true
 
 -- Memroy, CPU
 opt.hidden = true     -- Enable background buffer
@@ -31,7 +34,6 @@ opt.foldnestmax = 5
 opt.foldexpr = 'nvim_treesitter#foldexpr()'
 
 
-vim.g.encoding = "UTF-8"
 
 opt.background = "dark"
 opt.syntax = "on"
@@ -48,4 +50,3 @@ opt.wildmenu = true				-- turn on wild menu
 
 opt.laststatus = 0
 opt.rulerformat = "%l,%c"     -- show current row & column
-
