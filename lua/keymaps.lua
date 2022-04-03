@@ -3,8 +3,8 @@ local opts = { noremap=true, silent=true }
 
 -- nvim-tree
 map('n', '<C-n>', ':NvimTreeToggle<CR>', opts)       -- open/close
-map('n', '<leader>r', ':NvimTreeRefresh<CR>', opts)  -- refresh
-map('n', '<leader>n', ':NvimTreeFindFile<CR>', opts) -- search file
+--map('n', '<leader>r', ':NvimTreeRefresh<CR>', opts)  -- refresh
+--map('n', '<leader>n', ':NvimTreeFindFile<CR>', opts) -- search file
 
 -- Vista tag-viewer
 map('n', '<C-m>', ':Vista!!<CR>', opts) -- open/close
@@ -39,6 +39,9 @@ map('n', '<leader>ga', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
 map('n', '<leader>gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
 map('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 map('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+
+-- Clangd_Extension
+map('n', '<leader>gh', ':ClangdTypeHierarchy<CR>', opts)
 
 -- Telescope
 map('n', '<leader>ff', '<cmd>lua require("telescope.builtin").find_files{ cwd = vim.fn.systemlist("git rev-parse --show-toplevel")[1] }<cr>', opts)
