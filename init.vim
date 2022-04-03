@@ -1,13 +1,16 @@
 call plug#begin()
 " Syntax tree
 Plug 'nvim-treesitter/nvim-treesitter' , {'do': ':TSUpdate'}
+
+" File explorer
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'kyazdani42/nvim-web-devicons'
 
 " LSP
 Plug 'neovim/nvim-lspconfig'
-Plug 'glepnir/lspsaga.nvim'
 " Plug 'williamboman/nvim-lsp-installer'
+" performant UI
+Plug 'glepnir/lspsaga.nvim'
 "Clangd's off-spec features for neovim's LSP client.
 Plug 'p00f/clangd_extensions.nvim'
 
