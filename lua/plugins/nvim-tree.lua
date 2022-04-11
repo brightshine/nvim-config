@@ -13,6 +13,11 @@ require('nvim-tree').setup {
     width = 32,
     auto_resize = true
   },
+  update_focused_file = {
+    enable = true,
+    update_cwd = true,
+    ignore_list = {},
+  },
 }
 
 local g = vim.g
