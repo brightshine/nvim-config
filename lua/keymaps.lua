@@ -49,18 +49,6 @@ map('n', '<leader>fg', '<cmd>lua require("telescope.builtin").live_grep{ cwd = v
 map('n', '<leader>fb', '<cmd>lua require("telescope.builtin").buffers()<cr>', opts)
 map('n', '<leader>fh', '<cmd>lua require("telescope.builtin").help_tags()<cr>', opts)
 
--- Gtags
-map('n', '<leader>cs', ':GscopeFind s <C-R><C-W><cr>' , opts)
-map('n', '<leader>cg', ':GscopeFind g <C-R><C-W><cr>' , opts)
-map('n', '<leader>cc', ':GscopeFind c <C-R><C-W><cr>' , opts)
-map('n', '<leader>ct', ':GscopeFind t <C-R><C-W><cr>' , opts)
-map('n', '<leader>ce', ':GscopeFind e <C-R><C-W><cr>' , opts)
-map('n', '<leader>cf', ':GscopeFind f <C-R>=expand("<cfile>")<cr><cr>' , opts)
-map('n', '<leader>ci', ':GscopeFind i <C-R>=expand("<cfile>")<cr><cr>' , opts)
-map('n', '<leader>cd', ':GscopeFind d <C-R><C-W><cr>' , opts)
-map('n', '<leader>ca', ':GscopeFind a <C-R><C-W><cr>' , opts)
-map('n', '<leader>cz', ':GscopeFind z <C-R><C-W><cr>' , opts)
-
 -- Split
 map("n", "sv", ":vsp<CR>", opts)
 map("n", "sh", ":sp<CR>", opts)
