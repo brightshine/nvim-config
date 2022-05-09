@@ -7,13 +7,13 @@ map('n', '<C-n>', ':NvimTreeToggle<CR>', opts)       -- open/close
 --map('n', '<leader>n', ':NvimTreeFindFile<CR>', opts) -- search file
 
 -- Vista tag-viewer
-map('n', '<C-m>', ':Vista!!<CR>', opts) -- open/close
+map('n', '<C-y>', ':Vista!!<CR>', opts) -- open/close
 
 -- Close all windows
 map('n', '<leader>qq', ':qa!<CR>', opts)
 
 -- Enable fold
-map('n', '<C-i>', ':set foldmethod=expr<CR>', opts)
+map('n', '<C-x>', ':set foldmethod=expr<CR>', opts)
 
 -- Switch header/source
 map('n', '<leader>a', ':ClangdSwitchSourceHeader<CR>', opts)
