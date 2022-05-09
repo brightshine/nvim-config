@@ -14,6 +14,9 @@ Plug 'glepnir/lspsaga.nvim'
 "Clangd's off-spec features for neovim's LSP client.
 Plug 'p00f/clangd_extensions.nvim'
 
+" CCLS
+Plug 'm-pilia/vim-ccls'
+
 " Fuzzy search
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
