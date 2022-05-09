@@ -132,5 +132,5 @@ nmap <Leader>di <Plug>VimspectorBalloonEval
 xmap <Leader>di <Plug>VimspectorBalloonEval
 
 " Auto rename tmux window to the file name
-autocmd BufReadPost,FileReadPost,BufNewFile,BufEnter * call system("tmux rename-window '" . expand("%:t") . "'")
-autocmd VimLeave * call system("tmux rename-window 'tmux'")
+"autocmd BufReadPost,FileReadPost,BufNewFile,BufEnter * call system("tmux rename-window '" . expand("%:t") . "'")
+"autocmd VimLeave * call system("tmux rename-window 'tmux'")
