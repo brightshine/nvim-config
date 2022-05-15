@@ -92,8 +92,8 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-lua require('basic')
-lua require('keymaps')
+lua require('core/basic')
+lua require('core/keymaps')
 lua require('plugins/nvim-treesitter')
 lua require('plugins/nvim-tree')
 lua require('plugins/vista')
@@ -137,3 +137,4 @@ xmap <Leader>di <Plug>VimspectorBalloonEval
 " Auto rename tmux window to the file name
 "autocmd BufReadPost,FileReadPost,BufNewFile,BufEnter * call system("tmux rename-window '" . expand("%:t") . "'")
 "autocmd VimLeave * call system("tmux rename-window 'tmux'")
+"
