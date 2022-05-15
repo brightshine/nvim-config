@@ -76,6 +76,8 @@ Plug 'peterhoeg/vim-qml'
 Plug 'mfussenegger/nvim-dap'
 Plug 'Pocco81/DAPInstall.nvim'
 
+Plug 'emilienlemaire/clang-tidy.nvim'
+
 """""""""""""""""" TO LEARN """""""""""""""""""""""""""""""""""""""
 " Async plugin for vim and neovim to ease the use of ctags/gtags
 "Plug 'jsfaint/gen_tags'
@@ -94,6 +96,7 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 lua require('core/basic')
 lua require('core/keymaps')
+lua require('lsp/nvim-lspconfig')
 lua require('plugins/nvim-treesitter')
 lua require('plugins/nvim-tree')
 lua require('plugins/vista')
@@ -101,6 +104,7 @@ lua require('plugins/telescope')
 lua require('plugins/barbar')
 lua require('plugins/nvim-cmp')
 lua require('plugins/nvim-dap')
+"lua require('plugins/clang-tidy')
 lua require('plugins/clangd-extension')
 lua require('theme/monakai')
 lua require('theme/sonaki')
