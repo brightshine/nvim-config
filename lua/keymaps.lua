@@ -59,3 +59,20 @@ map("n", "s<", ":vertical resize -20<CR>", opts)
 map("n", "s=", "<C-w>=", opts)
 map("n", "sj", ":resize +10<CR>",opts)
 map("n", "sk", ":resize -10<CR>",opts)
+
+-- Copy to clipboard
+map("v", "<leader>y",  '"+y',opts)
+map("n", "<leader>Y",  '"+yg_',opts)
+map("n", "<leader>y",  '"+y',opts)
+map("n", "<leader>yy", '"+y',opts)
+
+-- Paste from clipboard
+map("n", "<leader>p", '+p',opts)
+map("n", "<leader>P", '"+P',opts)
+map("v", "<leader>p", '"+p',opts)
+map("v", "<leader>P", '"+P',opts)
+--nnoremap <leader>p "+p
+--nnoremap <leader>P "+P
+--vnoremap <leader>p "+p
+--vnoremap <leader>P "+P
+--https://www.reddit.com/r/neovim/comments/3fricd/easiest_way_to_copy_from_neovim_to_system/
