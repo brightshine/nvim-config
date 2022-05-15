@@ -100,9 +100,10 @@ lua require('plugins/vista')
 lua require('plugins/telescope')
 lua require('plugins/barbar')
 lua require('plugins/nvim-cmp')
-lua require('plugins/monakai')
 lua require('plugins/nvim-dap')
 lua require('plugins/clangd-extension')
+lua require('theme/monakai')
+lua require('theme/sonaki')
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Hotkey mapping
