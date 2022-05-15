@@ -20,9 +20,9 @@ require'lspconfig'.tsserver.setup{
 require'lspconfig'.vimls.setup{
   capabilities = capabilities
 }
-require'lspconfig'.ccls.setup{
-  capabilities = capabilities
-}
+--require'lspconfig'.ccls.setup{
+  --capabilities = capabilities
+--}
 local clangd_setup = {
   on_attach = function(client, bufnr)
     require "lsp_signature".on_attach({ -- This is mandatory, otherwise border config won't get registered.
