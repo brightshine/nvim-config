@@ -14,9 +14,6 @@ Plug 'glepnir/lspsaga.nvim'
 "Clangd's off-spec features for neovim's LSP client.
 Plug 'p00f/clangd_extensions.nvim'
 
-" CCLS
-Plug 'm-pilia/vim-ccls'
-
 " Fuzzy search
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -76,8 +73,6 @@ Plug 'peterhoeg/vim-qml'
 Plug 'mfussenegger/nvim-dap'
 Plug 'Pocco81/DAPInstall.nvim'
 
-Plug 'emilienlemaire/clang-tidy.nvim'
-
 """""""""""""""""" TO LEARN """""""""""""""""""""""""""""""""""""""
 " Async plugin for vim and neovim to ease the use of ctags/gtags
 "Plug 'jsfaint/gen_tags'
@@ -104,7 +99,6 @@ lua require('plugins/telescope')
 lua require('plugins/barbar')
 lua require('plugins/nvim-cmp')
 lua require('plugins/nvim-dap')
-"lua require('plugins/clang-tidy')
 lua require('plugins/clangd-extension')
 lua require('theme/monakai')
 lua require('theme/sonaki')
