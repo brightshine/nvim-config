@@ -6,7 +6,7 @@ require("clangd_extensions").setup {
   extensions = {
     -- defaults:
     -- Automatically set inlay hints (type hints)
-    autoSetHints = true,
+    autoSetHints = false,
     -- Whether to show hover actions inside the hover window
     -- This overrides the default hover handler
     hover_with_actions = true,
