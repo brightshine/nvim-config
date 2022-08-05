@@ -42,7 +42,7 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
-" pictograms for completion items 
+" pictograms for completion items
 Plug 'onsails/lspkind-nvim'
 " Add signature to completion
 Plug 'ray-x/lsp_signature.nvim'
@@ -72,6 +72,19 @@ Plug 'peterhoeg/vim-qml'
 " Debugger
 Plug 'mfussenegger/nvim-dap'
 Plug 'Pocco81/DAPInstall.nvim'
+
+" Jenkins
+Plug 'martinda/Jenkinsfile-vim-syntax'
+Plug 'ckipp01/nvim-jenkinsfile-linter'
+
+" Java
+Plug 'mfussenegger/nvim-jdtls'
+
+" Markdown
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+
+" Gradle
+Plug 'tfnico/vim-gradle'
 
 """""""""""""""""" TO LEARN """""""""""""""""""""""""""""""""""""""
 " Async plugin for vim and neovim to ease the use of ctags/gtags
@@ -137,3 +150,18 @@ xmap <Leader>di <Plug>VimspectorBalloonEval
 "autocmd BufReadPost,FileReadPost,BufNewFile,BufEnter * call system("tmux rename-window '" . expand("%:t") . "'")
 "autocmd VimLeave * call system("tmux rename-window 'tmux'")
 "
+
+" Show extra white space
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+au BufWinEnter * match ExtraWhitespace /\s\+$/
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhitespace /\s\+$/
+au BufWinLeave * call clearmatches()
+
+
+autocmd FileType yaml call Yaml_settings()
+
+function! Yaml_settings()
+  setlocal foldmethod=indent
+endfunction
